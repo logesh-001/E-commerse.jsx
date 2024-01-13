@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {}
+
+.Navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 1px 3px -2px black;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-logo p {
+    color: #171717;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 50px;
+    color: #626262;
+    font-size: 20px;
+    font-size: 500;
+}
+
+/* .nav-menu li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    gap: 3px;
+} */
+.nav-menu .menu-item {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px;
+    cursor: pointer;
+    color: #626262;
+    font-size: 20px;
+    font-weight: 500;
+
+}
+
+
+.nav-menu .menu-item:after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #ff4141;
+    transition: width 0.3s ease;
+    /* Optional: Add a smooth transition effect */
+}
+
+.nav-menu .menu-item.active:after {
+    width: 100%;
+}
+
+.nav-login-cart {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    gap: 45px;
+}
+
+.nav-login-cart>img {
+    width: 1.5rem;
+    margin-left: 1rem;
+}
+
+.nav-login-cart button {
+    width: 10rem;
+    height: 3.5rem;
+    outline: none;
+    border: 1px solid #7a7a7a;
+    border-radius: 6rem;
+    color: #515151;
+    font-size: 1.25rem;
+    background: #fff;
+    cursor: pointer;
+}
+
+.nav-login-cart button:active {
+    background: #f3f3f3;
+}
+
+.nav-cart-count {
+    width: 15px;
+    height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: -25px 0 0 -55px;
+    border-radius: 11px;
+    font-size: 14px;
+    background: red;
+    color: white;
+}
+
+@media (max-width:1200px) {
+    .nav-logo p {
+        font-size: 25px;
+    }
+
+    .nav-logo img {
+        width: 50px;
+    }
+
+    .nav-login-cart button {
+        width: 7rem;
+        height: 2rem;
+        font-size: 1rem;
+    }
+
+    .nav-menu {
+        gap: 30px;
+    }
+
+    .nav-menu .menu-item {
+        font-size: 15px;
+        gap: 30px;
+    }
+
+    .nav-login-cart {
+        gap: 20px;
+    }
+
+    .nav-cart-count {
+
+        margin: -25px 0 0 -25px;
+    }
+
+    .nav-login-cart img {
+        width: 2rem;
+        margin-left: 1rem;
+    }
+
+}
